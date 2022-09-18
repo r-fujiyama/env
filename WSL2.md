@@ -5,15 +5,20 @@
 詳細は以下を参照。  
 https://learn.microsoft.com/ja-jp/windows/wsl/install
 
-1. `wsl --install`
-1. `wsl --set-default-version 2`
-1. `wsl -d Ubuntu-20.04`
+以下を実行すれば`Ubuntu-20.04`がインストールされる。
+```bat
+wsl --install
+wsl --set-default-version 2
+wsl -d Ubuntu-20.04
+```
 
-### DNS設定
+## DNS設定
 
-1. `sudo sh -c "echo '[network]\ngenerateResolvConf = false' > /etc/wsl.conf"`
-1. `sudo rm /etc/resolv.conf`
-1. `sudo sh -c "echo 'nameserver 8.8.8.8' > /etc/resolv.conf"`
+```sh
+sudo sh -c "echo '[network]\ngenerateResolvConf = false' > /etc/wsl.conf"
+sudo rm /etc/resolv.conf
+sudo sh -c "echo 'nameserver 8.8.8.8' > /etc/resolv.conf"
+```
 
 ## 備考
 
